@@ -204,6 +204,7 @@ class DoctorDB {
     // ")); 
 
     // $rows = $wpdb->get_results("select * from doctor");
+    $rows = null;
     $rows = $connection->get_results($connection->prepare("SELECT d.doctor_id, d.credentials, d.first_name, d.last_name, a.city
      FROM doctor d, address_us a
      where d.doctor_id = a.doctor_id
@@ -220,6 +221,11 @@ class DoctorDB {
         </tr>";
 
 
+        if(!$rows){
+            return "No doctor data available.";
+        }
+        // $num_rows = mysql_num_rows($rows);
+        // echo $num_rows;
 
 
         foreach ($rows as $obj) {

@@ -1,24 +1,28 @@
 <!-- ACCORDION -->
 <div class="container">	
     <div id="accordion" role="tablist">
-    <div class="card">
+
+      <!--Begin State -->
+      <div class="card">
         <div class="card-header" role="tab" id="heading">
-          <h2 class="mb-0"><a href="#alabama"  onclick="showDoctor('table_al', 'AL');"data-parent="#accordion" data-toggle="collapse">
+          <h2 class="mb-0"><a href="#alabama"  class="btn btn-primary btn-block stated" state="table_al" state_abbr="AL" data-parent="#accordion" data-toggle="collapse">
             Alabama
           </a></h2>
         </div>
 
-        <div id="alabama" class="collapse" >
-          <div id="table_al" class="card-body" onmousedown='return false;' onselectstart='return false;'>
+        <div id="alabama" class="collapse">
+          <div id="alabama_data" class="card-body table-response" onmousedown='return false;' onselectstart='return false;'>
 
           </div>
         </div>
       </div>
+      <hr>
+      <!--End State -->
 
-
+      <!--Begin State -->
       <div class="card">
         <div class="card-header" role="tab" id="heading">
-          <h2 class="mb-0"><a href="#alaska"  class="stated" state="table_ak" state_abbr="AK" data-parent="#accordion" data-toggle="collapse">
+          <h2 class="mb-0"><a href="#alaska"  class="btn btn-primary btn-block stated" state="table_ak" state_abbr="AK" data-parent="#accordion" data-toggle="collapse">
             Alaska
           </a></h2>
         </div>
@@ -29,33 +33,42 @@
           </div>
         </div>
       </div>
+      <hr>
+      <!--End State -->
 
-       <div class="card">
+      <!--Begin State ARIZONA AZ-->
+      <div class="card">
         <div class="card-header" role="tab" id="heading">
-          <h2 class="mb-0"><a href="#arizona"  class="stated" data-parent="#accordion" data-toggle="collapse">
+          <h2 class="mb-0"><a href="#arizona"  class="btn btn-primary btn-block stated" state="table_az" state_abbr="AZ" data-parent="#accordion" data-toggle="collapse">
             Arizona
           </a></h2>
         </div>
 
         <div id="arizona" class="collapse">
-          <div id="table_az" class="card-body" onmousedown='return false;' onselectstart='return false;'>
+          <div id="arizona_data" class="card-body table-response" onmousedown='return false;' onselectstart='return false;'>
 
           </div>
         </div>
       </div>
-      <div class="card">
+      <hr>
+      <!--End State -->
+
+       <!--Begin State ARKANSAS AR-->
+       <div class="card">
         <div class="card-header" role="tab" id="heading">
-          <h2 class="mb-0"><a href="#arkansas"  onclick="showDoctor('table_ar', 'AR');"data-parent="#accordion" data-toggle="collapse">
+          <h2 class="mb-0"><a href="#arkansas"  class="btn btn-primary btn-block stated" state="table_ar" state_abbr="AR" data-parent="#accordion" data-toggle="collapse">
             Arkansas
           </a></h2>
         </div>
 
         <div id="arkansas" class="collapse">
-          <div id="table_ar" class="card-body" onmousedown='return false;' onselectstart='return false;'>
+          <div id="arkansas_data" class="card-body table-response" onmousedown='return false;' onselectstart='return false;'>
 
           </div>
         </div>
-      </div>    
+      </div>
+      <hr>
+      <!--End State -->    
       <div class="card">
         <div class="card-header" role="tab" id="heading">
           <h2 class="mb-0"><a href="#california"  onclick="showDoctor('table_ca', 'CA');"data-parent="#accordion" data-toggle="collapse">

@@ -29,6 +29,8 @@
 
 <body <?php body_class(); ?>>
 
+    <h1 class="text-center"> AGMD US Doctor Lookup </h1>
+
     <?php get_template_part('doctor_accordion'); ?>  
 
 <?php wp_footer(); ?>

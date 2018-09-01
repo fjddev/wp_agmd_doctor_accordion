@@ -55,29 +55,11 @@ add_action('after_setup_theme', 'agmd_features');
 
 function get_doctor() {
 
-//echo "get_doctor: Hello From functions.php";
 $doctorDB = new DoctorDB();
 $state = $_POST['state'];
-
-
-// if(!$conn){	
-//   $conn = get_connection();	
-// }  
-
-
+$results = NULL;
 $results = $doctorDB->get_wp_DoctorByState($state);
 echo $results;
-
-
-
-// $results = doctor_state_list ();
-// echo $results;
-
-
-
-//$state = $_POST['state'];
-//echo "<h2>" . $state ."</h2>";
-
 
 die(); 
 }
