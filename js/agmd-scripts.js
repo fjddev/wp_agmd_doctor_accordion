@@ -22,14 +22,20 @@ function showDoctor(id, state) {
 
 jQuery( document ).ready( function( $ ) {
 $('.stated').click(function(event){
+
+
     event.preventDefault(); // prevent default behaviour of link click
 
-	var state_abbr = $(this).attr('state_abbr')
+    var state_abbr = $(this).attr('state_abbr');
 	var value = $( this ).attr( 'href' );
     var state = value + "_data";
+
+   console.log('state_abbr'); 
+   console.log('#state_top_'+state_abbr);
+
     
 
-    // Return when a state has been processed
+    // Return when a state has been previously processed
     // This eliminates duplicate data being processed.
     var stateExists = states.includes(state_abbr);
     if(!stateExists){
@@ -38,7 +44,12 @@ $('.stated').click(function(event){
         return;
     }
 
-    
+   // alert(states.toString());
+
+
+
+
+
 
   var data = {
     cache: false,  
@@ -46,9 +57,8 @@ $('.stated').click(function(event){
     'action': 'get_doctor', 'state': state_abbr
   };
   $.post( ajaxurl, data, function( response ) { 
-    //   $(state).removeData('');
       $(value).append(response);
-      //$('.stated').off('click');
+      window.location.hash = '#state_top_'+state_abbr;
   });
 
 
